@@ -18,10 +18,6 @@ export class SigninComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(6)])
   });
   error: Boolean = false;
-  url = window.location.hostname.includes("localhost")
-    ? "http://localhost:8080/api/auth/google"
-    : "https://todoit-back.herokuapp.com/api/auth/google";
-
 
   constructor(
     private authService: AuthService,
@@ -50,7 +46,7 @@ export class SigninComponent implements OnInit {
       this.authService.googleLogin({ id_token: data.idToken }).subscribe(({ token }) => {
         this.cookieService.set('hatoken', token);
         this.router.navigateByUrl('/tasks');
-      })
+      },err=> console.log(err))
     })
   }
 
