@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 15%;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card {
+  border: 2px solid #34495e;
+  margin-top: 0px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+mat-card-title {
+  border-bottom: 2px solid #34495e;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+mat-error{
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.error {
+  color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  background-color: #34495e;
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.button-google {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #34495e;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.text-center{
+  display: flex;
+  justify-content: center;
+  color: #34495e;
+  font-size: 1.1rem;
+}

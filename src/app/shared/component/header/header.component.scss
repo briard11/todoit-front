@@ -1,0 +1,21 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.logo{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.vertical-bar{
+    font-size: 2.1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.toolbar{
+    background-color: #34495E;
+}
+
+.logout,
+.login{
+    border: 2px solid #fff;
+}

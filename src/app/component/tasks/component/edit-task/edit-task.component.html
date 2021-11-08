@@ -1,0 +1,35 @@
+<mat-card *ngIf="!!taskForm">
+  <mat-card-title>Edit Task</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="taskForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Title"
+          formControlName="titulo"
+        />
+        <mat-error *ngIf="taskForm.invalid">
+          Ingrese un titulo valido(2 caracteres min)
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Descripcion</mat-label>
+        <input
+          type="text"
+          matInput
+          placeholder="Descripcion"
+          formControlName="descripcion"
+        />
+        <mat-error *ngIf="taskForm.invalid">
+          Ingrese una descripcion valida(2 caracteres min)
+        </mat-error>
+      </mat-form-field>
+
+      <button type="submit" class="button" mat-button (click)="editTask()">
+        Save
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

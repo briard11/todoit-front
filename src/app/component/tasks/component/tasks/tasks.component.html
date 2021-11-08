@@ -1,0 +1,25 @@
+<h3 class="text-center">Pending</h3>
+<mat-divider></mat-divider>
+<div
+  *ngIf="getTasksPending()?.length !== 0"
+  class="tasks-list"
+>
+  <app-task
+    [task]="task"
+    [pending]="true"
+    *ngFor="let task of getTasksPending()"
+  ></app-task>
+</div>
+<button mat-button class="task-button" (click)="createTask()">New Task</button>
+
+<h3 class="text-center">Completed</h3>
+<mat-divider></mat-divider>
+<div
+  *ngIf="getTasksCompleted()?.length !== 0; else EmptyListCompleted"
+  class="tasks-list"
+>
+  <app-task [task]="task" *ngFor="let task of getTasksCompleted()"></app-task>
+</div>
+<ng-template #EmptyListCompleted>
+  <p class="text-center">No completed tasks</p>
+</ng-template>

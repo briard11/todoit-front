@@ -1,0 +1,17 @@
+<div class="desciption">
+  <h2>{{ task.titulo }}</h2>
+  <p>{{ task.descripcion }}</p>
+</div>
+<span class="example-spacer"></span>
+<button mat-button (click)="editTask()" *ngIf="pending">
+  <mat-icon matSuffix>edit</mat-icon>
+</button>
+<button mat-button (click)="deleteTask()">
+  <mat-icon matSuffix>delete_forever</mat-icon>
+</button>
+<button mat-button (click)="archiveTask(true)" *ngIf="pending">
+  <mat-icon matSuffix>done</mat-icon>
+</button>
+<button mat-button (click)="archiveTask(false)" *ngIf="!pending">
+  <mat-icon matSuffix>unarchive</mat-icon>
+</button>
