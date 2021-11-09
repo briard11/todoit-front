@@ -28,10 +28,10 @@ export class TasksComponent implements OnInit {
   }
 
   getTasksPending() {
-    return this.tasksList.filter(x => !x.estadoTarea)
+    return this.tasksList.filter(x => !x.estadoTarea && x.estado)
   }
   getTasksCompleted() {
-    return this.tasksList.filter(x => !!x.estadoTarea)
+    return this.tasksList.filter(x => !!x.estadoTarea && x.estado)
   }
 
   createTask() {

@@ -40,6 +40,7 @@ export class TaskComponent implements OnInit {
 
   deleteTask() {
     this.tasksService.deleteTask(this.task._id).subscribe(taskDeleted => {
+      this.task.estado = false;
       this._snackBar.open('You delete taks successfully', 'close')
     })
   }
